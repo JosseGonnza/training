@@ -33,21 +33,34 @@ public class StringCalculatorTest
     {
         StringCalculator.Add("1\n2,3").Should().Be(6);
     }
+    
+    [Fact(DisplayName = "Should be the sum of numbers into the text those be split by comma or another separator character")]
+    public void Should_be_the_sum_of_numbers_into_the_text_those_be_split_by_comma_or_another_separator_character()
+    {
+        StringCalculator.Add("//;\n1;2").Should().Be(3);
+    }
 }
 
 public class StringCalculator
 {
+    private static char separator = ',';
+
     public static int Add(string text)
     {
         if (text.Length == 0)
         {
             return 0;
         }
-        text = text.Replace("\n", ",");
-        if (text.Contains(","))
+        if (text.StartsWith("//"))
+        {
+            separator = text.ToCharArray()[2];
+            text = text.Substring(4);
+        }
+        text = text.Replace('\n', separator);
+        if (text.Contains(separator))
         {
             return text //"1,2"
-                .Split(",").ToList() //["1", "2"]
+                .Split(separator).ToList() //["1", "2"]
                 .Aggregate(0, (current, next) => current + Convert.ToInt32(next)); //3 
         }
         return Convert.ToInt32(text);
