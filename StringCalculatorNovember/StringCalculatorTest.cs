@@ -27,6 +27,12 @@ public class StringCalculatorTest
     {
         StringCalculator.Add("1,2,3,4,5,6,7,8,9").Should().Be(45);
     }
+    
+    [Fact(DisplayName = "Should be the sum of numbers into the text those be split by comma and new line character")]
+    public void Should_be_the_sum_of_numbers_into_the_text_those_be_split_by_comma_and_new_line_character()
+    {
+        StringCalculator.Add("1\n2,3").Should().Be(6);
+    }
 }
 
 public class StringCalculator
@@ -37,6 +43,7 @@ public class StringCalculator
         {
             return 0;
         }
+        text = text.Replace("\n", ",");
         if (text.Contains(","))
         {
             return text //"1,2"
