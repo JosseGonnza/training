@@ -25,7 +25,7 @@ public class StringCalculatorTest
     [Fact(DisplayName = "Should be the sum of numbers into the text those be split by comma")]
     public void Should_be_the_sum_of_numbers_into_the_text_those_be_split_by_comma()
     {
-        StringCalculator.Add("1,2").Should().Be(3);
+        StringCalculator.Add("1,2,3,4,5,6,7,8,9").Should().Be(45);
     }
 }
 
