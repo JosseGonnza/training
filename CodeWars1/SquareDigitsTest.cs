@@ -4,12 +4,12 @@ namespace CodeWars1;
 
 public class SquareDigitsTest
 {
-    [Fact(DisplayName = "To square every digit of a number")]
-    public void to_square_every_digit_of_a_number()
+    [Theory(DisplayName = "To square every digit of a number")]
+    [InlineData(1, 1)]
+    [InlineData(2, 2)]
+    public void to_square_every_digit_of_a_number(int number, int expected)
     {
-        var number = 1;
-
-        SquareDigits(number).Should().Be(1);
+        SquareDigits(number).Should().Be(expected);
     }
 
     public static int SquareDigits(int number)
