@@ -1,4 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using UserRegistrationNovember.Models;
+using UserRegistrationNovember.Repositories;
+using UserRegistrationNovember.ValueObjects;
 
 namespace UserRegistrationNovember.Controllers;
 
@@ -6,18 +9,25 @@ namespace UserRegistrationNovember.Controllers;
 [Route("[controller]")]
 public class UserController : ControllerBase
 {
+    private readonly UserRepository _userRepository;
+
+    public UserController(UserRepository userRepository)
+    {
+        this._userRepository = userRepository;
+    }
+    
     [HttpPost(Name = "CreateUser")]
     public IActionResult PostUser(UserRequest request)
     {
-        var user = new User(request.Email, request.Password);
-        return Ok(user);
+        var user = new User(request.Email, Password.Create(request.Password));
+        _userRepository.Save(user);
+        return Ok(user.Id);
     }
-}
 
-public record User(string Email, string Password);
-
-public class UserRequest
-{
-    public string Email { get; set; }
-    public string Password { get; set; }
+    [HttpGet(Name = "GetUsers")]
+    public IActionResult GetUsers()
+    {
+        var users = _userRepository.GetAll();
+        return Ok(users);
+    }
 }

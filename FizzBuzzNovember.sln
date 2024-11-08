@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculatorNovember", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserRegistrationNovember", "UserRegistrationNovember\UserRegistrationNovember.csproj", "{54020BBB-24FE-4782-ABA1-B435DA47F0A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserRegistration.Unit.Tests", "UserRegistration.Unit.Tests\UserRegistration.Unit.Tests.csproj", "{3FCC1C22-D8FD-484F-8740-DFC2C6490F9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{54020BBB-24FE-4782-ABA1-B435DA47F0A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54020BBB-24FE-4782-ABA1-B435DA47F0A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54020BBB-24FE-4782-ABA1-B435DA47F0A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FCC1C22-D8FD-484F-8740-DFC2C6490F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FCC1C22-D8FD-484F-8740-DFC2C6490F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FCC1C22-D8FD-484F-8740-DFC2C6490F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FCC1C22-D8FD-484F-8740-DFC2C6490F9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
