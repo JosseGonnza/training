@@ -1,4 +1,3 @@
-using UserRegistrationNovember.Controllers;
 using UserRegistrationNovember.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,4 +1,3 @@
-using UserRegistrationNovember.Controllers;
 using UserRegistrationNovember.Models;
 
 namespace UserRegistrationNovember.Repositories;

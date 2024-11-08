@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserRegistrationNovember", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserRegistration.Unit.Tests", "UserRegistration.Unit.Tests\UserRegistration.Unit.Tests.csproj", "{3FCC1C22-D8FD-484F-8740-DFC2C6490F9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeWars1", "CodeWars1\CodeWars1.csproj", "{496F513A-BDC8-4B02-8CD3-0785B8321A85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{3FCC1C22-D8FD-484F-8740-DFC2C6490F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FCC1C22-D8FD-484F-8740-DFC2C6490F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FCC1C22-D8FD-484F-8740-DFC2C6490F9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{496F513A-BDC8-4B02-8CD3-0785B8321A85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{496F513A-BDC8-4B02-8CD3-0785B8321A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{496F513A-BDC8-4B02-8CD3-0785B8321A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{496F513A-BDC8-4B02-8CD3-0785B8321A85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
