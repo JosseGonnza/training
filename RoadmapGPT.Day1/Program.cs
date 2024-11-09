@@ -1,24 +1,33 @@
-﻿namespace RoadmapGPT.Day1;
+﻿using System.Text;
+
+namespace RoadmapGPT.Day1;
 
 internal class Program
 {
     public static void Main(string[] args)
     {
-        int[,] matriz = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
-        Console.WriteLine(SumDiagonals(matriz));
+        var word = "aaabbcc";
+        Console.WriteLine(CompressorString(word));
     }
 
-    private static int SumDiagonals(int[,] matriz)
+    private static string CompressorString(string randomWord)
     {
-        int sum = 0;
-        int longitude = matriz.GetLength(0);
+        StringBuilder result = new StringBuilder();
+        var sum = 1;
 
-        for (int i = 0; i < longitude; i++)
+        for (int i = 1; i < randomWord.Length; i++)
         {
-            sum += matriz[i, i];
-            sum += matriz[i, (longitude - i - 1)];
+            if (randomWord[i] == randomWord[i - 1])
+            {
+                sum++;
+            }
+            else
+            {
+                result.Append(randomWord[i - 1]).Append(sum);
+                sum = 1;
+            }
         }
-
-        return sum;
+        result.Append(randomWord[^1]).Append(sum);
+        return result.ToString();
     }
 }
