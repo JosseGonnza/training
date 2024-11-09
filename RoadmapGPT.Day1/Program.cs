@@ -5,14 +5,12 @@
         Console.WriteLine("First number:");
         var num = Convert.ToInt32(Console.ReadLine());
 
-        if (num % 2 == 0)
+        var sum = 0;
+        for (int i = 1; i <= num; i++)
         {
-            Console.WriteLine("First number is even");
-        }
-        else
-        {
-            Console.WriteLine("First number is odd");
+            sum += i;
         }
         
+        Console.WriteLine("The sum of this numbers is: " + sum);
     }
 }
