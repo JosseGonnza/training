@@ -1,31 +1,43 @@
-﻿using System.Text;
-
-namespace RoadmapGPT.Day1;
+﻿namespace RoadmapGPT.Day1;
 
 internal class Program
 {
     public static void Main(string[] args)
     {
-        int[] array = [1, 2, 3, 4, 5];
-        var target = 6;
-        var result = FindPairsToSum(array, target);
-        Console.WriteLine(string.Join(",", result));
+        int[,] matriz = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        var result = RotateMatriz(matriz);
+        PrintMatriz(matriz);
+        Console.WriteLine("\n");
+        PrintMatriz(result);
     }
 
-    private static List<(int, int)> FindPairsToSum(int[] array, int number)
+    private static int[,] RotateMatriz(int[,] matriz)
     {
-        List<(int, int)> pairs = new List<(int, int)>();
+        var longitude = matriz.GetLength(0);
+        int[,] rotate = new int[longitude, longitude];
         
-        for (int i = 0; i < array.Length; i++)
+        for (int i = 0; i < longitude; i++)
         {
-            for (int j = (i + 1); j < array.Length; j++)
+            for (int j = 0; j < longitude; j++)
             {
-                if ((array[i] + array[j]) == number)
-                {
-                    pairs.Add((array[i], array[j]));
-                }
+                rotate[j, longitude - i - 1] = matriz[i, j];
             }
         }
-        return pairs;
+        return rotate;
+    }
+    
+    private static void PrintMatriz(int[,] matriz)
+    {
+        int rows = matriz.GetLength(0);
+        int cols = matriz.GetLength(1);
+
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < cols; j++)
+            {
+                Console.Write(matriz[i, j]); 
+            }
+            Console.WriteLine(); 
+        }
     }
 }
