@@ -4,18 +4,17 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        var pairs = PairFilter(numbers);
-        Console.WriteLine(string.Join(",", pairs));
+        var phrase = "Anita lava la tina";
+        Console.WriteLine(IsPalindrome(phrase));
     }
 
-    private static int[] PairFilter(int[] array)
+    private static bool IsPalindrome(string phrase)
     {
-        List<int> pairs = new List<int>();
-        foreach (var num in array)
-        {
-            if (num % 2 == 0) pairs.Add(num);
-        }
-        return pairs.ToArray();
+        var newPhrase = phrase.ToLower().Replace(" ", "");
+        var charArray = newPhrase.ToCharArray();
+        Array.Reverse(charArray);
+        var phraseReverse = new string(charArray);
+
+        return newPhrase == phraseReverse;
     }
 }
