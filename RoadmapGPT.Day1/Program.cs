@@ -1,26 +1,15 @@
 ﻿namespace RoadmapGPT.Day1;
 
-internal abstract class Program
+internal class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("First number:");
-        var num = Convert.ToInt32(Console.ReadLine());
+        var result = Sum(5, 7);
+        Console.WriteLine(result);
+    }
 
-        /*var i = 0;
-    while (i <= 10)
+    private static int Sum(int a, int b)
     {
-        var product = num * i;
-        Console.Write(num + " * " + i + " = " + product);
-        Console.Write("\n");
-        i++;
-    }*/
-
-        for (int j = 0; j < 10; j++)
-        {
-            var product = num * j;
-            Console.Write(num + " * " + j + " = " + product);
-            Console.Write("\n");
-        }
+        return a + b;
     }
 }
