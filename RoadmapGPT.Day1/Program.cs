@@ -4,19 +4,15 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        int[] numbers = [1, 2, 3, 4, 5];
-        var result = ElementSum(numbers);
-        
+        var phrase = "ana";
+        var result = StringReverse(phrase);
         Console.WriteLine(result);
     }
 
-    private static int ElementSum(int[] array)
+    private static string StringReverse(string phrase)
     {
-        int sum = 0;
-        for (int i = 0; i <= (array.Length -1); i++)
-        {
-            sum += array[i];
-        }
-        return sum;
+        var charArray = phrase.ToCharArray();
+        Array.Reverse(charArray);
+        return new string(charArray);
     }
 }
