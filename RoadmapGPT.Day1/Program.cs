@@ -4,21 +4,22 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        int[] numbers = { 12, 5, 74, 6, 9, 100, 83, 3};
-        (var max, var min) = FindMaxAndMin(numbers);
-        Console.WriteLine($"El número máximo es {max} y el mínimo es {min}");
+        Console.WriteLine("Escribe algo bonito: ");
+        var phrase = Convert.ToString(Console.ReadLine());
+        var result = VocalCount(phrase);
+        
+        Console.WriteLine("Hay un total de " + result + " vocales.");
     }
 
-    private static (int, int) FindMaxAndMin(int[] array)
+    private static int VocalCount(string phrase)
     {
-        var max = array[0];
-        var min = array[0];
+        int vocalCount = 0;
+        var vocals = "aeiouAEIOU";
 
-        foreach (var num in array)
+        foreach (char c in phrase)
         {
-            if (num > max) max = num;
-            if (num < min) min = num;
+            if (vocals.Contains(c)) vocalCount++;
         }
-        return (max, min);
-    }    
+        return vocalCount;
+    }
 }
