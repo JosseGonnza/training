@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserRegistration.Unit.Tests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeWars1", "CodeWars1\CodeWars1.csproj", "{496F513A-BDC8-4B02-8CD3-0785B8321A85}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoadmapGPT.Day1", "RoadmapGPT.Day1\RoadmapGPT.Day1.csproj", "{909E1C45-E4DC-4D07-BCF0-E5C4750B7F3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{496F513A-BDC8-4B02-8CD3-0785B8321A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{496F513A-BDC8-4B02-8CD3-0785B8321A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{496F513A-BDC8-4B02-8CD3-0785B8321A85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{909E1C45-E4DC-4D07-BCF0-E5C4750B7F3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{909E1C45-E4DC-4D07-BCF0-E5C4750B7F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{909E1C45-E4DC-4D07-BCF0-E5C4750B7F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{909E1C45-E4DC-4D07-BCF0-E5C4750B7F3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
