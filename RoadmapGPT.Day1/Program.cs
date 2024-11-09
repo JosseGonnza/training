@@ -4,22 +4,19 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("Escribe algo bonito: ");
-        var phrase = Convert.ToString(Console.ReadLine());
-        var result = VocalCount(phrase);
+        int[] numbers = [1, 2, 3, 4, 5];
+        var result = ElementSum(numbers);
         
-        Console.WriteLine("Hay un total de " + result + " vocales.");
+        Console.WriteLine(result);
     }
 
-    private static int VocalCount(string phrase)
+    private static int ElementSum(int[] array)
     {
-        int vocalCount = 0;
-        var vocals = "aeiouAEIOU";
-
-        foreach (char c in phrase)
+        int sum = 0;
+        for (int i = 0; i <= (array.Length -1); i++)
         {
-            if (vocals.Contains(c)) vocalCount++;
+            sum += array[i];
         }
-        return vocalCount;
+        return sum;
     }
 }
