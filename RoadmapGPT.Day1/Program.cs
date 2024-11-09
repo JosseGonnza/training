@@ -4,14 +4,18 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        var phrase = "Esto es un ejemplo un poco más largo";
-        Console.WriteLine(WordCount(phrase));
+        int[] nums = [5, 10, 15, 30];
+        Console.WriteLine(CalculateAverage(nums));
     }
 
-    private static int WordCount(string phrase)
+    private static int CalculateAverage(int[] array)
     {
-        var words = phrase.Split(' ');
-        var numberOfWords = words.Length;
-        return numberOfWords;
+        var sum = 0;
+        for (int i = 0; i <= (array.Length - 1); i++)
+        {
+            sum += array[i];
+        }
+        var average = sum / array.Length;
+        return average;        
     }
 }
