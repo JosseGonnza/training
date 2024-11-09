@@ -6,28 +6,26 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        var word = "aaabbcc";
-        Console.WriteLine(CompressorString(word));
+        int[] array = [1, 2, 3, 4, 5];
+        var target = 6;
+        var result = FindPairsToSum(array, target);
+        Console.WriteLine(string.Join(",", result));
     }
 
-    private static string CompressorString(string randomWord)
+    private static List<(int, int)> FindPairsToSum(int[] array, int number)
     {
-        StringBuilder result = new StringBuilder();
-        var sum = 1;
-
-        for (int i = 1; i < randomWord.Length; i++)
+        List<(int, int)> pairs = new List<(int, int)>();
+        
+        for (int i = 0; i < array.Length; i++)
         {
-            if (randomWord[i] == randomWord[i - 1])
+            for (int j = (i + 1); j < array.Length; j++)
             {
-                sum++;
-            }
-            else
-            {
-                result.Append(randomWord[i - 1]).Append(sum);
-                sum = 1;
+                if ((array[i] + array[j]) == number)
+                {
+                    pairs.Add((array[i], array[j]));
+                }
             }
         }
-        result.Append(randomWord[^1]).Append(sum);
-        return result.ToString();
+        return pairs;
     }
 }
