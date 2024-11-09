@@ -4,15 +4,14 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        var phrase = "ana";
-        var result = StringReverse(phrase);
-        Console.WriteLine(result);
+        var phrase = "Esto es un ejemplo un poco más largo";
+        Console.WriteLine(WordCount(phrase));
     }
 
-    private static string StringReverse(string phrase)
+    private static int WordCount(string phrase)
     {
-        var charArray = phrase.ToCharArray();
-        Array.Reverse(charArray);
-        return new string(charArray);
+        var words = phrase.Split(' ');
+        var numberOfWords = words.Length;
+        return numberOfWords;
     }
 }
