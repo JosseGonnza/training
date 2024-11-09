@@ -4,18 +4,17 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        int[] nums = [5, 10, 15, 30];
-        Console.WriteLine(CalculateAverage(nums));
+        int[] array = [1, 2, 3, 4];
+        var number = 3;
+        Console.WriteLine(FindNumber(array, number));
     }
 
-    private static int CalculateAverage(int[] array)
+    private static bool FindNumber(int[] array, int number)
     {
-        var sum = 0;
-        for (int i = 0; i <= (array.Length - 1); i++)
+        foreach (var n in array)
         {
-            sum += array[i];
+            if (n == number) return true;
         }
-        var average = sum / array.Length;
-        return average;        
+        return false;
     }
 }
