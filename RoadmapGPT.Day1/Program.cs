@@ -1,18 +1,26 @@
-﻿namespace RoadmapGPT.Day1;
+﻿using System.Xml;
+
+namespace RoadmapGPT.Day1;
 
 internal class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("Introduce una temperatura en celsius: ");
-        int temperature = Convert.ToInt32(Console.ReadLine());
-        var result = ConvertToFahrenheit(temperature);
-        Console.WriteLine("La temperatura en farenheit es: " + result);
+        Console.WriteLine("Intruce one number:");
+        var number = Convert.ToInt32(Console.ReadLine());
+
+        var result = IsPrimeNumber(number);
+        
+        Console.WriteLine(result);
     }
 
-    private static int ConvertToFahrenheit(int celsius)
+    private static bool IsPrimeNumber(int number)
     {
-        var result = celsius * 9 / 5 + 32;
-        return result;
+        if (number <= 1) return false;
+        for (int i = 2; i <= Math.Sqrt(number); i++)
+        {
+            if (number % i == 0) return false;
+        }
+        return true;
     }
 }
