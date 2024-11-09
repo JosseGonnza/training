@@ -4,12 +4,15 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        var result = Sum(5, 7);
-        Console.WriteLine(result);
+        Console.WriteLine("Introduce una temperatura en celsius: ");
+        int temperature = Convert.ToInt32(Console.ReadLine());
+        var result = ConvertToFahrenheit(temperature);
+        Console.WriteLine("La temperatura en farenheit es: " + result);
     }
 
-    private static int Sum(int a, int b)
+    private static int ConvertToFahrenheit(int celsius)
     {
-        return a + b;
+        var result = celsius * 9 / 5 + 32;
+        return result;
     }
 }
