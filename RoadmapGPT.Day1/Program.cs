@@ -4,40 +4,21 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        int[,] matriz = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        var result = RotateMatriz(matriz);
-        PrintMatriz(matriz);
-        Console.WriteLine("\n");
-        PrintMatriz(result);
+        var word = "reconocer";
+        Console.WriteLine(IsPalindrome(word));
     }
 
-    private static int[,] RotateMatriz(int[,] matriz)
+    private static bool IsPalindrome(string word)
     {
-        var longitude = matriz.GetLength(0);
-        int[,] rotate = new int[longitude, longitude];
-        
-        for (int i = 0; i < longitude; i++)
+        /*var result = string.Join("", word.ToCharArray().Reverse());
+        return word == result;*/
+        var charArray = word.ToCharArray();
+        var result = "";
+        for (int i = (word.Length - 1); i >= 0; i--)
         {
-            for (int j = 0; j < longitude; j++)
-            {
-                rotate[j, longitude - i - 1] = matriz[i, j];
-            }
+            result += word[i];
         }
-        return rotate;
-    }
-    
-    private static void PrintMatriz(int[,] matriz)
-    {
-        int rows = matriz.GetLength(0);
-        int cols = matriz.GetLength(1);
 
-        for (int i = 0; i < rows; i++)
-        {
-            for (int j = 0; j < cols; j++)
-            {
-                Console.Write(matriz[i, j]); 
-            }
-            Console.WriteLine(); 
-        }
+        return word == result;
     }
 }
