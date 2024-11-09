@@ -4,17 +4,18 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        int[] array = [1, 2, 3, 4];
-        var number = 3;
-        Console.WriteLine(FindNumber(array, number));
+        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        var pairs = PairFilter(numbers);
+        Console.WriteLine(string.Join(",", pairs));
     }
 
-    private static bool FindNumber(int[] array, int number)
+    private static int[] PairFilter(int[] array)
     {
-        foreach (var n in array)
+        List<int> pairs = new List<int>();
+        foreach (var num in array)
         {
-            if (n == number) return true;
+            if (num % 2 == 0) pairs.Add(num);
         }
-        return false;
+        return pairs.ToArray();
     }
 }
