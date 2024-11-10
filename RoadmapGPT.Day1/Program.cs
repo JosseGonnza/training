@@ -4,20 +4,16 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        int[] array = new[] { 1, 2, 3, 4, 5, 6 };
-        Console.WriteLine(CountPairs(array));
+        var year = 1916;
+        Console.WriteLine(IsLeap(year));
     }
 
-    private static int CountPairs(int[] array)
+    private static bool IsLeap(int year)
     {
-        var pairs = 0;
-        foreach (var num in array)
+        if (year % 400 != 0 && year % 100 == 0 || year % 4 != 0)
         {
-            if (num % 2 == 0)
-            {
-                pairs++;
-            }
+            return false;
         }
-        return pairs;
+        return true;
     }
 }
