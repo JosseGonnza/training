@@ -1,16 +1,21 @@
-Ejercicio 9: Verificar si un Año es Bisiesto
-Descripción: Escribe una función que verifique si un año dado es bisiesto. Un año es bisiesto si es divisible por 4, pero no por 100, a menos que también sea divisible por 400.
+Ejercicio 10: Sumar Elementos en la Diagonal de una Matriz Cuadrada
+Descripción: Dada una matriz cuadrada (ej. 3x3), escribe una función que devuelva la suma de los elementos en la diagonal principal.
 
 Ejemplo:
 
-- Entrada: 2000
-- Salida esperada: true
-- Entrada: 1900
-- Salida esperada: false
+- Entrada:
+- Copiar código 
+
+1 2 3
+
+4 5 6
+
+7 8 9
+
+- Salida esperada: 15 (1 + 5 + 9)
 
 Pruebas sugeridas en TDD:
 
-- Dado un año divisible por 400, debe devolver true.
-- Dado un año divisible por 100 pero no por 400, debe devolver false.
-- Dado un año divisible por 4 pero no por 100, debe devolver true.
-- Dado un año no divisible por 4, debe devolver false.
+- Dada una matriz de 1x1, debe devolver el único elemento.
+- Dada una matriz de varios elementos en la diagonal, debe devolver la suma de esos elementos.
+- Dada una matriz no cuadrada, el método debería manejar el error apropiadamente.
