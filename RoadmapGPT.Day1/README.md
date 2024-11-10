@@ -1,16 +1,14 @@
-Ejercicio 7: Verificar si un Número es Palíndromo
-Descripción: Escribe una función que verifique si un número es palíndromo. Un número es palíndromo si se lee igual de izquierda a derecha que de derecha a izquierda.
+Ejercicio 8: Contar Elementos Pares en un Arreglo
+Descripción: Escribe una función que reciba un arreglo de enteros y devuelva la cantidad de números pares en él.
 
 Ejemplo:
 
-- Entrada: 12321
-- Salida esperada: true
-- Entrada: 12345
-- Salida esperada: false
+- Entrada: [1, 2, 3, 4, 5, 6]
+- Salida esperada: 3
 
 Pruebas sugeridas en TDD:
 
-- Dado un número de un solo dígito, debe devolver true.
-- Dado un número que es un palíndromo, debe devolver true.
-- Dado un número que no es un palíndromo, debe devolver false.
-- Dado el número 0, debe devolver true.
+- Dado un arreglo vacío, debe devolver 0.
+- Dado un arreglo con todos números impares, debe devolver 0.
+- Dado un arreglo con algunos números pares, debe contar los pares correctamente.
+- Dado un arreglo con todos números pares, debe devolver el tamaño del arreglo.

@@ -4,21 +4,20 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        var number = 1221;
-        Console.WriteLine(IsPalindrome(number));
+        int[] array = new[] { 1, 2, 3, 4, 5, 6 };
+        Console.WriteLine(CountPairs(array));
     }
 
-    private static bool IsPalindrome(int number)
+    private static int CountPairs(int[] array)
     {
-        var original = number;
-        var reverse = 0;
-        while (number > 0)
+        var pairs = 0;
+        foreach (var num in array)
         {
-            var digit = number % 10;
-            reverse = reverse * 10 + digit;
-            number /= 10;
+            if (num % 2 == 0)
+            {
+                pairs++;
+            }
         }
-
-        return original == reverse;
+        return pairs;
     }
 }
