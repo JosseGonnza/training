@@ -1,16 +1,13 @@
-Ejercicio 4: Verificar Números Primos
-Descripción: Crea una función que determine si un número es primo. Un número primo es aquel que solo es divisible por 1 y por sí mismo.
+Ejercicio 5: Invertir un Número
+Descripción: Escribe una función que tome un número entero positivo y devuelva el número invertido.
 
 Ejemplo:
 
-- Entrada: 7
-- Salida esperada: true
-- Entrada: 10
-- Salida esperada: false
+- Entrada: 1234
+- Salida esperada: 4321
 
 Pruebas sugeridas en TDD:
 
-- Dado el número 2, debe devolver true.
-- Dado el número 1, debe devolver false.
-- Dado un número primo mayor a 2, debe devolver true.
-- Dado un número no primo, debe devolver false.
+- Dado un número de un solo dígito, debe devolver el mismo número.
+- Dado un número de varios dígitos, debe devolverlo invertido.
+- Dado el número 0, debe devolver 0.
