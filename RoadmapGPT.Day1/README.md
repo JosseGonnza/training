@@ -1,14 +1,14 @@
-Ejercicio 2: Calcular la Media de un Arreglo
-Descripción: Escribe una función que tome un arreglo de enteros y devuelva la media (promedio) de sus elementos.
+Ejercicio 3: Contar las Vocales de una Cadena
+Descripción: Escribe una función que cuente el número de vocales en una cadena.
 
 Ejemplo:
 
-- Entrada: [5, 10, 15]
-- Salida esperada: 10
+- Entrada: "Hola Mundo"
+- Salida esperada: 4 
 
 Pruebas sugeridas en TDD:
 
-- Dado un arreglo con un solo elemento, debe devolver ese mismo número.
-- Dado un arreglo vacío, debe devolver 0.
-- Dado un arreglo de varios números positivos, debe devolver su media.
-- Dado un arreglo con valores negativos, debe calcular la media correctamente.
+- Dada una cadena vacía, debe devolver 0.
+- Dada una cadena sin vocales, debe devolver 0.
+- Dada una cadena con varias vocales, debe devolver el número correcto.
+- Dada una cadena con letras en mayúsculas y minúsculas, debe contar las vocales independientemente de su caso.
