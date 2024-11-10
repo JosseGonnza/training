@@ -1,14 +1,14 @@
-Ejercicio 1: Convertir una Cadena en Título
-Descripción: Dada una cadena de texto en minúsculas, conviértela en formato título. En este formato, la primera letra de cada palabra debe estar en mayúsculas y el resto en minúsculas.
+Ejercicio 2: Calcular la Media de un Arreglo
+Descripción: Escribe una función que tome un arreglo de enteros y devuelva la media (promedio) de sus elementos.
 
 Ejemplo:
 
-- Entrada: "el viento se llevó"
-- Salida esperada: "El Viento Se Llevó"
+- Entrada: [5, 10, 15]
+- Salida esperada: 10
 
 Pruebas sugeridas en TDD:
 
-- Dada una cadena de una palabra, la primera letra debe estar en mayúscula.
-- Dada una cadena de varias palabras, la primera letra de cada palabra debe estar en mayúscula.
-- Dada una cadena vacía, debe devolver una cadena vacía.
-- Dada una cadena ya en formato título, debe devolver la misma cadena sin cambios.
+- Dado un arreglo con un solo elemento, debe devolver ese mismo número.
+- Dado un arreglo vacío, debe devolver 0.
+- Dado un arreglo de varios números positivos, debe devolver su media.
+- Dado un arreglo con valores negativos, debe calcular la media correctamente.
