@@ -1,13 +1,13 @@
-Ejercicio 5: Invertir un Número
-Descripción: Escribe una función que tome un número entero positivo y devuelva el número invertido.
+Ejercicio 6: Encontrar el Mínimo y Máximo en un Arreglo
+Descripción: Dado un arreglo de enteros, escribe una función que devuelva el número mínimo y el máximo en el arreglo.
 
 Ejemplo:
 
-- Entrada: 1234
-- Salida esperada: 4321
+- Entrada: [3, 1, 4, 1, 5, 9, 2]
+- Salida esperada: (1, 9)
 
 Pruebas sugeridas en TDD:
 
-- Dado un número de un solo dígito, debe devolver el mismo número.
-- Dado un número de varios dígitos, debe devolverlo invertido.
-- Dado el número 0, debe devolver 0.
+- Dado un arreglo vacío, debe devolver (0, 0) o lanzar una excepción, según prefieras.
+- Dado un arreglo con un solo elemento, debe devolver el mismo número como mínimo y máximo.
+- Dado un arreglo con números positivos y negativos, debe encontrar el mínimo y máximo correctamente.
