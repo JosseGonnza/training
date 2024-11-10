@@ -4,21 +4,21 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        int[] array = new int[]{3, 1, 4, 1, 5, 9, 2};
-        Console.WriteLine(FindMaxAndMin(array));
+        var number = 1221;
+        Console.WriteLine(IsPalindrome(number));
     }
 
-    private static (int, int) FindMaxAndMin(int[] array)
+    private static bool IsPalindrome(int number)
     {
-        var max = array[0];
-        var min = array[0];
-
-        foreach (var num in array)
+        var original = number;
+        var reverse = 0;
+        while (number > 0)
         {
-            if (max < num) max = num;
-            if (min > num) min = num;
+            var digit = number % 10;
+            reverse = reverse * 10 + digit;
+            number /= 10;
         }
 
-        return (min, max);
+        return original == reverse;
     }
 }

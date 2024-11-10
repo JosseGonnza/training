@@ -1,13 +1,16 @@
-Ejercicio 6: Encontrar el Mínimo y Máximo en un Arreglo
-Descripción: Dado un arreglo de enteros, escribe una función que devuelva el número mínimo y el máximo en el arreglo.
+Ejercicio 7: Verificar si un Número es Palíndromo
+Descripción: Escribe una función que verifique si un número es palíndromo. Un número es palíndromo si se lee igual de izquierda a derecha que de derecha a izquierda.
 
 Ejemplo:
 
-- Entrada: [3, 1, 4, 1, 5, 9, 2]
-- Salida esperada: (1, 9)
+- Entrada: 12321
+- Salida esperada: true
+- Entrada: 12345
+- Salida esperada: false
 
 Pruebas sugeridas en TDD:
 
-- Dado un arreglo vacío, debe devolver (0, 0) o lanzar una excepción, según prefieras.
-- Dado un arreglo con un solo elemento, debe devolver el mismo número como mínimo y máximo.
-- Dado un arreglo con números positivos y negativos, debe encontrar el mínimo y máximo correctamente.
+- Dado un número de un solo dígito, debe devolver true.
+- Dado un número que es un palíndromo, debe devolver true.
+- Dado un número que no es un palíndromo, debe devolver false.
+- Dado el número 0, debe devolver true.
